@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sleep for 10 seconds
-        run: sleep 10s
+        run: sleep 5s
         shell: bash
   dummy-b:
     needs:
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sleep for 30 seconds
-        run: sleep 30s
+        run: sleep 5s
         shell: bash
   dummy-c:
     needs:
