@@ -19,12 +19,16 @@ jobs:
         run: sleep 10s
         shell: bash
   dummy-b:
+    needs:
+      - dummy-a
     runs-on: ubuntu-latest
     steps:
       - name: Sleep for 30 seconds
         run: sleep 30s
         shell: bash
   dummy-c:
+    needs:
+      - dummy-b
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
